@@ -1,95 +1,91 @@
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universo Silvie</title>
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
+* {
+    box-sizing: border-box;
+}
 
-<header>
-    <h1>UNIVERSO SILVIE</h1>
-    <p>Un espacio para descubrir, crear y compartir</p>
-</header>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f1f8;
+    color: #29243a;
+}
 
-<nav>
-    <a href="#misterio">Misterio</a>
-    <a href="#fengshui">Feng Shui</a>
-    <a href="#radio">Radio</a>
-    <a href="#cuentos">Cuentos</a>
-    <a href="#laboratorio">Tecnología</a>
-    <a href="#reflexiones">Reflexiones</a>
-</nav>
+header {
+    background: #24203b;
+    color: #f2d9a0;
+    text-align: center;
+    padding: 55px 20px;
+}
 
-<main>
-    <h2>Bienvenidos a mi universo</h2>
-    <p>Ideas, conocimientos, historias y creatividad.</p>
+header h1 {
+    letter-spacing: 4px;
+}
 
-    <section class="departamentos">
+nav {
+    background: #39304f;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-        <a class="tarjeta" href="#misterio">
-            🔮 Tarot y Dominomancia
-        </a>
+nav a {
+    color: white;
+    text-decoration: none;
+}
 
-        <a class="tarjeta" href="#fengshui">
-            🏡 Feng Shui
-        </a>
+nav a:hover {
+    color: #f2d9a0;
+}
 
-        <a class="tarjeta" href="#radio">
-            🎙️ Románticos Empedernidos
-        </a>
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 35px 20px;
+}
 
-        <a class="tarjeta" href="#cuentos">
-            📖 Cuenta Cuentos
-        </a>
+main > h2,
+main > p {
+    text-align: center;
+}
 
-        <a class="tarjeta" href="#laboratorio">
-            💻 Laboratorio Creativo
-        </a>
+.departamentos {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 35px 0;
+}
 
-        <a class="tarjeta" href="#reflexiones">
-            ✨ Mi Diario de Reflexiones
-        </a>
+.tarjeta {
+    background: white;
+    padding: 35px 20px;
+    border-radius: 14px;
+    text-align: center;
+    text-decoration: none;
+    color: #39304f;
+    font-weight: bold;
+    box-shadow: 0 3px 12px #00000012;
+    transition: 0.3s;
+}
 
-    </section>
+.tarjeta:hover {
+    transform: translateY(-5px);
+    background: #eee6f5;
+}
 
-    <section id="misterio" class="contenido">
-        <h2>El rincón del misterio</h2>
-        <p>Tarot, dominomancia y simbolismo.</p>
-    </section>
+.contenido {
+    background: white;
+    padding: 30px;
+    margin: 25px 0;
+    border-radius: 12px;
+    scroll-margin-top: 20px;
+}
 
-    <section id="fengshui" class="contenido">
-        <h2>Feng Shui internacional</h2>
-        <p>Espacios, tradiciones y armonía.</p>
-    </section>
-
-    <section id="radio" class="contenido">
-        <h2>Románticos Empedernidos</h2>
-        <p>Historias, conversaciones y programas.</p>
-    </section>
-
-    <section id="cuentos" class="contenido">
-        <h2>Cuenta Cuentos</h2>
-        <p>Un espacio para narrar historias.</p>
-    </section>
-
-    <section id="laboratorio" class="contenido">
-        <h2>Laboratorio Creativo</h2>
-        <p>Web, programación e inteligencia artificial.</p>
-    </section>
-
-    <section id="reflexiones" class="contenido">
-        <h2>Mi Diario de Reflexiones</h2>
-        <p>Pensamientos, experiencias y aprendizajes.</p>
-    </section>
-</main>
-
-<footer>
-    <p>© <span id="anio"></span> Universo Silvie</p>
-</footer>
-
-<script src="js/principal.js"></script>
-</body>
-</html>
+footer {
+    background: #24203b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
