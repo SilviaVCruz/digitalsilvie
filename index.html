@@ -1,95 +1,340 @@
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universo Silvie</title>
-    <link rel="stylesheet" href="estilos.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digital Silvie | Universo creativo</title>
+
+<meta name="description" content="Un universo de historias, conocimiento, creatividad y descubrimientos.">
+
+<style>
+:root {
+  --crema: #f5eee3;
+  --terracota: #a65f45;
+  --oliva: #697451;
+  --cafe: #49382f;
+  --papel: #fffaf2;
+  --dorado: #c49b65;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--crema);
+  color: var(--cafe);
+  font-family: Georgia, serif;
+}
+
+header {
+  padding: 75px 20px 65px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 15% 20%, #c49b6530, transparent 30%),
+    radial-gradient(circle at 85% 80%, #69745135, transparent 35%),
+    #49382f;
+  color: var(--crema);
+}
+
+header .eyebrow {
+  color: #dfc49d;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+header h1 {
+  font-size: clamp(36px, 7vw, 65px);
+  letter-spacing: 5px;
+  margin: 20px 0;
+}
+
+header p {
+  font-style: italic;
+  font-size: 18px;
+  color: #ead9c5;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--papel);
+  border-bottom: 1px solid #ddcbb4;
+  padding: 17px 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--cafe);
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--terracota);
+}
+
+main {
+  max-width: 1120px;
+  margin: auto;
+  padding: 55px 22px;
+}
+
+.intro {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 45px;
+}
+
+.intro .eyebrow {
+  color: var(--terracota);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.intro h2 {
+  font-size: clamp(29px, 5vw, 43px);
+  font-weight: normal;
+  margin: 15px 0;
+}
+
+.intro p {
+  line-height: 1.8;
+  color: #756354;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(245px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  color: var(--cafe);
+  background: var(--papel);
+  padding: 30px 24px;
+  border: 1px solid #e2d3bf;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--terracota);
+  box-shadow: 0 10px 25px #49382f15;
+}
+
+.card .icon {
+  font-size: 35px;
+}
+
+.card h3 {
+  font-size: 21px;
+  font-weight: normal;
+  margin: 17px 0 10px;
+}
+
+.card p {
+  color: #806e5d;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.card .more {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--terracota);
+  font-size: 13px;
+}
+
+.content {
+  margin-top: 30px;
+  padding: 40px 25px;
+  background: var(--papel);
+  border-left: 4px solid var(--oliva);
+  scroll-margin-top: 85px;
+}
+
+.content h2 {
+  font-size: 27px;
+  font-weight: normal;
+}
+
+.content p {
+  line-height: 1.8;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  background: var(--cafe);
+  color: var(--crema);
+}
+
+footer p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 55px 15px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  main {
+    padding: 35px 16px;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>UNIVERSO SILVIE</h1>
-    <p>Un espacio para descubrir, crear y compartir</p>
+  <div class="eyebrow">Un universo creativo</div>
+  <h1>DIGITAL SILVIE</h1>
+  <p>Un espacio para descubrir, crear y compartir.</p>
 </header>
 
 <nav>
-    <a href="#misterio">Misterio</a>
-    <a href="#fengshui">Feng Shui</a>
-    <a href="#radio">Radio</a>
-    <a href="#cuentos">Cuentos</a>
-    <a href="#laboratorio">Tecnología</a>
-    <a href="#reflexiones">Reflexiones</a>
+  <a href="#misterio">Misterio</a>
+  <a href="#fengshui">Feng Shui</a>
+  <a href="#radio">Radio</a>
+  <a href="#cuentos">Cuentos</a>
+  <a href="#laboratorio">Tecnología</a>
+  <a href="#reflexiones">Reflexiones</a>
 </nav>
 
 <main>
-    <h2>Bienvenidos a mi universo</h2>
-    <p>Ideas, conocimientos, historias y creatividad.</p>
 
-    <section class="departamentos">
+  <section class="intro">
+    <div class="eyebrow">Bienvenidos a mi universo</div>
+    <h2>Un lugar donde las ideas cobran vida</h2>
+    <p>
+      Conocimiento, historias, simbolismo, creatividad
+      y tecnología se encuentran en un mismo espacio.
+      Explora, descubre y encuentra inspiración.
+    </p>
+  </section>
 
-        <a class="tarjeta" href="#misterio">
-            🔮 Tarot y Dominomancia
-        </a>
+  <section class="grid">
 
-        <a class="tarjeta" href="#fengshui">
-            🏡 Feng Shui
-        </a>
+    <a class="card" href="#misterio">
+      <span class="icon">🔮</span>
+      <h3>El rincón del misterio</h3>
+      <p>Tarot, dominomancia, símbolos y tradiciones.</p>
+      <span class="more">Descubrir →</span>
+    </a>
 
-        <a class="tarjeta" href="#radio">
-            🎙️ Románticos Empedernidos
-        </a>
+    <a class="card" href="#fengshui">
+      <span class="icon">🌿</span>
+      <h3>Feng Shui internacional</h3>
+      <p>Espacios, culturas, armonía y rituales.</p>
+      <span class="more">Explorar →</span>
+    </a>
 
-        <a class="tarjeta" href="#cuentos">
-            📖 Cuenta Cuentos
-        </a>
+    <a class="card" href="#radio">
+      <span class="icon">🎙️</span>
+      <h3>Románticos Empedernidos</h3>
+      <p>Conversaciones, música e historias para escuchar.</p>
+      <span class="more">Escuchar →</span>
+    </a>
 
-        <a class="tarjeta" href="#laboratorio">
-            💻 Laboratorio Creativo
-        </a>
+    <a class="card" href="#cuentos">
+      <span class="icon">📖</span>
+      <h3>Cuenta Cuentos</h3>
+      <p>Relatos, narraciones y mundos imaginarios.</p>
+      <span class="more">Leer y escuchar →</span>
+    </a>
 
-        <a class="tarjeta" href="#reflexiones">
-            ✨ Mi Diario de Reflexiones
-        </a>
+    <a class="card" href="#laboratorio">
+      <span class="icon">💻</span>
+      <h3>Laboratorio creativo</h3>
+      <p>Diseño web, programación e inteligencia artificial.</p>
+      <span class="more">Experimentar →</span>
+    </a>
 
-    </section>
+    <a class="card" href="#reflexiones">
+      <span class="icon">✨</span>
+      <h3>Diario de reflexiones</h3>
+      <p>Pensamientos, conciencia y aprendizajes cotidianos.</p>
+      <span class="more">Leer reflexiones →</span>
+    </a>
 
-    <section id="misterio" class="contenido">
-        <h2>El rincón del misterio</h2>
-        <p>Tarot, dominomancia y simbolismo.</p>
-    </section>
+  </section>
 
-    <section id="fengshui" class="contenido">
-        <h2>Feng Shui internacional</h2>
-        <p>Espacios, tradiciones y armonía.</p>
-    </section>
+  <section class="content" id="misterio">
+    <h2>🔮 El rincón del misterio</h2>
+    <p>Un espacio dedicado al Tarot, la dominomancia,
+    la simbología y las tradiciones culturales.</p>
+  </section>
 
-    <section id="radio" class="contenido">
-        <h2>Románticos Empedernidos</h2>
-        <p>Historias, conversaciones y programas.</p>
-    </section>
+  <section class="content" id="fengshui">
+    <h2>🌿 Feng Shui internacional</h2>
+    <p>Conoce distintas escuelas, prácticas y formas
+    de comprender los espacios.</p>
+  </section>
 
-    <section id="cuentos" class="contenido">
-        <h2>Cuenta Cuentos</h2>
-        <p>Un espacio para narrar historias.</p>
-    </section>
+  <section class="content" id="radio">
+    <h2>🎙️ Románticos Empedernidos</h2>
+    <p>Un espacio para compartir conversaciones,
+    relatos y programas de radio.</p>
+  </section>
 
-    <section id="laboratorio" class="contenido">
-        <h2>Laboratorio Creativo</h2>
-        <p>Web, programación e inteligencia artificial.</p>
-    </section>
+  <section class="content" id="cuentos">
+    <h2>📖 Cuenta Cuentos</h2>
+    <p>Historias originales, relatos clásicos y narraciones.</p>
+  </section>
 
-    <section id="reflexiones" class="contenido">
-        <h2>Mi Diario de Reflexiones</h2>
-        <p>Pensamientos, experiencias y aprendizajes.</p>
-    </section>
+  <section class="content" id="laboratorio">
+    <h2>💻 Laboratorio creativo</h2>
+    <p>Un espacio para aprender programación,
+    desarrollar páginas web y experimentar con IA.</p>
+  </section>
+
+  <section class="content" id="reflexiones">
+    <h2>✨ Diario de reflexiones</h2>
+    <p>Pensamientos, experiencias y descubrimientos
+    que merecen ser compartidos.</p>
+  </section>
+
 </main>
 
 <footer>
-    <p>© <span id="anio"></span> Universo Silvie</p>
+  <h3>DIGITAL SILVIE</h3>
+  <p>Creado con creatividad, curiosidad y pasión por aprender.</p>
+  <p>© <span id="year"></span> Digital Silvie</p>
 </footer>
 
-<script src="js/principal.js"></script>
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
 </body>
 </html>
